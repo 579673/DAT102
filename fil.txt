@@ -1,1 +1,6 @@
-1#Metallica#nmoe#123#ROCK#asf
+1#Green Day#Holiday#2000#ROCK#Dunno
+2#ABBA#Dancing Queen#1979#POP#VetIkke
+3#Slayer#Raining Blood#1986#METAL#WhoKnows
+4#Avenged Sevenfold#Critical Acclaim#2003#METAL#Idunno
+5#ACDC#Highway To Hell#1987#METAL#NobodyKnows
+6#Steppenwolf#Road Blues#1967#ROCK#Virgin

@@ -30,15 +30,16 @@ public class FileHandler {
 		PrintWriter pw = openFile(filename);
 		StringBuilder sb = new StringBuilder();
 		if (pw != null) {
-			for (CD cd : cda.searchArtist("")) {
+			for (CD cd : cda.getTable()) {
 				sb.append(cd.getNumber()); sb.append(DELIMITER);
 				sb.append(cd.getArtist()); sb.append(DELIMITER);
 				sb.append(cd.getTitle());  sb.append(DELIMITER);
 				sb.append(cd.getYear());   sb.append(DELIMITER);
 				sb.append(cd.getGenre());  sb.append(DELIMITER);
 				sb.append(cd.getPublisher());
+				pw.println(sb);
+				sb.setLength(0);
 			}
-			pw.println(sb);
 		}
 		pw.close();
 	}

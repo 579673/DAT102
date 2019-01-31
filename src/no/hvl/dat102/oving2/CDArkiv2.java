@@ -8,7 +8,6 @@ import no.hvl.dat102.oving1.ADT.CDArkivADT;
 public class CDArkiv2 implements CDArkivADT {
 	private LinearNode<CD> cds;
 	private int count;
-	
 	public CDArkiv2() {
 		this.cds = null;
 		this.count = 0;
@@ -23,7 +22,7 @@ public class CDArkiv2 implements CDArkivADT {
 		CD[] tab = new CD[count];
 		LinearNode<CD> temp = cds;
 		if (temp == null)
-			throw new EmptyCollectionException("CDArkiv");
+			return new CD[0];
 		for (int i = 0; i < count; i++) {
 			tab[i] = temp.getElement();
 			temp = temp.getNext();
@@ -33,7 +32,16 @@ public class CDArkiv2 implements CDArkivADT {
 
 	@Override
 	public void add(CD cd) {
-		this.cds = new LinearNode<CD>(cd, cds);
+		LinearNode<CD> temp = cds;
+		if (count == 0) {
+			cds = new LinearNode<CD>(cd);
+			count++;
+			return;
+		}
+		while (temp.getNext() != null)
+			temp = temp.getNext();
+		temp.setNext(new LinearNode<CD>(cd));
+		//this.cds = new LinearNode<CD>(cd, cds);
 		this.count++;
 	}
 	public void add(CD[] cds) {
