@@ -1,5 +1,6 @@
 package no.hvl.dat102.oving1;
 
+import no.hvl.dat102.oving1.Genre;
 import no.hvl.dat102.oving1.ADT.CDArkivADT;
 /**
  * First implementation of a CD Archive datastructure
