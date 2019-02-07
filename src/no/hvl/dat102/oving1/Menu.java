@@ -3,6 +3,7 @@ package no.hvl.dat102.oving1;
 import java.io.IOException;
 
 import no.hvl.dat102.oving1.ADT.CDArkivADT;
+import no.hvl.dat102.oving2.CDArkiv2;
 
 public class Menu {
 	private CDArkivADT cda;
@@ -13,12 +14,17 @@ public class Menu {
 										"Display statistics", "Exit"};
 	private final String[] deleteMenu = {"Delete by title", "Delete by artist", "Return to main menu"};
 	
-	public Menu(CDArkivADT cda) {
+	public Menu() {
 		this.gui = new TextGUI();
-		this.cda = cda;
+		this.cda = null;
 	}
 	//Initialize the archive
 	public void start() {
+		if(gui.confirmDialog(null, "Y for Stack implementation, N for Array."))
+			cda = new CDArkiv2();
+		else
+			cda = new CDArkiv();
+		
 		try {
 			filename = gui.promptForFilename();
 		if (FileHandler.checkFilename(filename)) 

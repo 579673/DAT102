@@ -2,7 +2,7 @@ package no.hvl.dat102.oving1;
 
 public class CD {
 	private int number;
-	private String artist = "Tanja";
+	private String artist;
 	private String title;
 	private int year;
 	private Genre genre;
