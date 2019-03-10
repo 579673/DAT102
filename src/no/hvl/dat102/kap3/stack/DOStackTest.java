@@ -6,7 +6,7 @@ public class DOStackTest {
 		for (int i = 0; i < 7; i++) {
 			stack.push(i);
 		}
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < 5; i++) {
 			System.out.println(stack.pop());
 		}
 	}

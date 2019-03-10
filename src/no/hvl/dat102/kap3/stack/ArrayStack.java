@@ -2,7 +2,7 @@ package no.hvl.dat102.kap3.stack;
 
 /**
  * An array implementation of a stack in which the 
- * bottom of our stack is fixed at index 0.
+ * bottom of the stack is fixed at index 0.
  * @author steff
  *
  * @param <T> element
@@ -55,14 +55,12 @@ public class ArrayStack<T> implements StackADT<T> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return top == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return top;
 	}
 	
 }

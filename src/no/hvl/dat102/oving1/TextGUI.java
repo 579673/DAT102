@@ -146,6 +146,15 @@ public class TextGUI {
 		System.out.println("Invalid input");
 		return confirmDialog(cds, question);
 	}
+	public boolean simpleConfirmDialog(String question) {
+		System.out.println(question + " Y/N");
+		switch(in.nextLine().toUpperCase()) {
+			case "Y": return true;
+			case "N": return false;
+		}
+		System.out.println("Invalid input");
+		return simpleConfirmDialog(question);
+	}
 	private void printCDs(CD[] cds) {
 		for (CD cd : cds)
 			System.out.println(cd);

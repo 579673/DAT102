@@ -20,7 +20,7 @@ public class Menu {
 	}
 	//Initialize the archive
 	public void start() {
-		if(gui.confirmDialog(null, "Y for Stack implementation, N for Array."))
+		if(gui.simpleConfirmDialog("Y for Stack implementation, N for Array."))
 			cda = new CDArkiv2();
 		else
 			cda = new CDArkiv();
